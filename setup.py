@@ -11,7 +11,7 @@ setup(
 	version=version,
 	description='ERPNext app to make date fields respect the default fiscal year, start and end dates',
 	author='Ameen Ahmed (Level Up)',
-	author_email='levelupye@gmail.com',
+	author_email='levelupye@gmail.com, kid1194@gmail.com',
 	packages=find_packages(),
 	zip_safe=False,
 	include_package_data=True,
