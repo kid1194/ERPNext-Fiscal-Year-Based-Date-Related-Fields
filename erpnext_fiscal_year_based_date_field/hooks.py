@@ -3,10 +3,10 @@ from . import __version__ as app_version
 app_name = "erpnext_fiscal_year_based_date_field"
 app_title = "ERPNext Fiscal Year Based Date Field"
 app_publisher = "Ameen Ahmed (Level Up)"
-app_description = ""
+app_description = "ERPNext app to make date fields respect the default fiscal year, start and end dates"
 app_icon = "octicon octicon-file-directory"
 app_color = "grey"
-app_email = "levelupye@gmail.com"
+app_email = "levelupye@gmail.com, kid1194@gmail.com"
 app_license = "MIT"
 
 # Includes in <head>
