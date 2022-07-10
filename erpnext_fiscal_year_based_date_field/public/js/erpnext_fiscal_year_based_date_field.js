@@ -101,23 +101,21 @@ frappe.ui.form.ControlDate = class ControlDate extends frappe.ui.form.ControlDat
 		frappe.db.get_value('Fiscal Year', {year: dfy}, ['year_start_date', 'year_end_date'],
 		function(v) {
 		    let ret = v.message,
-		    num = parseInt,
-		    fdt = frappe.datetime,
-		    ysd = ret.year_start_date.match(/\d+/g),
-		    yed = ret.year_end_date.match(/\d+/g),
 		    ndt = fdt.now_date(true),
-		    sdt = fdt.now_date(true),
-		    edt = fdt.now_date(true),
-		    yk = ysd[0].length > 2 ? 0 : 2,
-		    dk = ysd[0].length > 2 ? 2 : 0;
-		    me.nowYear = num(ysd[yk]);
-		    ndt.setFullYear(me.nowYear);
-		    sdt.setFullYear(me.nowYear);
-		    sdt.setMonth(num(ysd[1]));
-		    sdt.setDate(num(ysd[dk]));
-		    edt.setFullYear(num(yed[yk]));
-		    edt.setMonth(num(yed[1]));
-		    edt.setDate(num(yed[dk]));
+		    sdt = new Date(ret.year_start_date),
+		    edt = new Date(ret.year_end_date);
+		    if (sdt.getTime() > ndt.getTime()) {
+		        me.nowYear = sdt.getFullYear();
+		        ndt.setFullYear(me.nowYear);
+		    }
+		    if (sdt.getTime() > ndt.getTime()) {
+		        me.nowMonth = sdt.getMonth();
+		        ndt.setMonth(me.nowMonth);
+		    }
+		    if (sdt.getTime() > ndt.getTime()) {
+		        me.nowDay = sdt.getDate();
+		        ndt.setDate(me.nowDay);
+		    }
 		    me.datepicker.update({
 		        startDate: ndt,
 		        minDate: sdt,
@@ -151,6 +149,8 @@ frappe.ui.form.ControlDate = class ControlDate extends frappe.ui.form.ControlDat
 	get_now_date() {
 	    let dt = frappe.datetime.now_date(true);
 	    if (this.nowYear) dt.setFullYear(this.nowYear);
+	    if (this.nowMonth) dt.setMonth(this.nowMonth);
+	    if (this.nowDay) dt.setDate(this.nowDay);
 		return frappe.datetime.convert_to_system_tz(dt, false).toDate();
 	}
 	set_t_for_today() {
