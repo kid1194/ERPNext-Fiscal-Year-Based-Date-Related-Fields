@@ -1,8 +1,8 @@
-# ERPNext-Fiscal-Year-Based-Date-Field
-ERPNext app to make date fields respect the default fiscal year, start and end dates.
+# ERPNext Fiscal Year Based Date Field
+ERPNext app to make date related fields respect the default fiscal year.
 
-In ERPNext, date fields show the current date and there is nothing wrong with that, but if you are entering historical data manually then you might end up forgetting to change the **Posting Date** to match the default active **Fiscal Year**.
-For such reason I created this to help myself and others with such issues.
+In ERPNext, date related fields show the current date and there is nothing wrong with that, but if you are entering historical data manually then you might end up forgetting to change the date related fields to match the default active **Fiscal Year**.
+For such reason I created this to help myself and others with such issue.
 
 #### Note
 This has not been tested yet, so if you can, please test it and tell me how it goes ☺ 
