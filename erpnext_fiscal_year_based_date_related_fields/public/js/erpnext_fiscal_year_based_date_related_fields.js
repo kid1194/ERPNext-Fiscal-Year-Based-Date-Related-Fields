@@ -32,6 +32,6 @@ frappe.ui.form.ControlDate = class ControlDate extends frappe.ui.form.ControlDat
 	    if (this.nowYear) dt.setFullYear(this.nowYear);
 	    if (this.nowMonth) dt.setMonth(this.nowMonth);
 	    if (this.nowDay) dt.setDate(this.nowDay);
-		return frappe.datetime.convert_to_system_tz(dt, false).toDate();
+	    return frappe.datetime.convert_to_system_tz(dt, false).toDate();
 	}
 };
