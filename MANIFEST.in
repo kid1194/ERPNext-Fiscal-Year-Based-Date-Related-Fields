@@ -4,15 +4,15 @@ include *.json
 include *.md
 include *.py
 include *.txt
-recursive-include erpnext_fiscal_year_based_date_field *.css
-recursive-include erpnext_fiscal_year_based_date_field *.csv
-recursive-include erpnext_fiscal_year_based_date_field *.html
-recursive-include erpnext_fiscal_year_based_date_field *.ico
-recursive-include erpnext_fiscal_year_based_date_field *.js
-recursive-include erpnext_fiscal_year_based_date_field *.json
-recursive-include erpnext_fiscal_year_based_date_field *.md
-recursive-include erpnext_fiscal_year_based_date_field *.png
-recursive-include erpnext_fiscal_year_based_date_field *.py
-recursive-include erpnext_fiscal_year_based_date_field *.svg
-recursive-include erpnext_fiscal_year_based_date_field *.txt
-recursive-exclude erpnext_fiscal_year_based_date_field *.pyc
+recursive-include erpnext_fiscal_year_based_date_related_fields *.css
+recursive-include erpnext_fiscal_year_based_date_related_fields *.csv
+recursive-include erpnext_fiscal_year_based_date_related_fields *.html
+recursive-include erpnext_fiscal_year_based_date_related_fields *.ico
+recursive-include erpnext_fiscal_year_based_date_related_fields *.js
+recursive-include erpnext_fiscal_year_based_date_related_fields *.json
+recursive-include erpnext_fiscal_year_based_date_related_fields *.md
+recursive-include erpnext_fiscal_year_based_date_related_fields *.png
+recursive-include erpnext_fiscal_year_based_date_related_fields *.py
+recursive-include erpnext_fiscal_year_based_date_related_fields *.svg
+recursive-include erpnext_fiscal_year_based_date_related_fields *.txt
+recursive-exclude erpnext_fiscal_year_based_date_related_fields *.pyc
