@@ -1,9 +1,9 @@
 from . import __version__ as app_version
 
 app_name = "erpnext_fiscal_year_based_date_field"
-app_title = "ERPNext Fiscal Year Based Date Field"
+app_title = "ERPNext Fiscal Year Based Date Related Field"
 app_publisher = "Ameen Ahmed (Level Up)"
-app_description = "ERPNext app to make date fields respect the default fiscal year, start and end dates"
+app_description = "ERPNext app to make date related fields respect the default fiscal year, start and end dates"
 app_icon = "octicon octicon-file-directory"
 app_color = "grey"
 app_email = "levelupye@gmail.com, kid1194@gmail.com"
@@ -16,7 +16,10 @@ app_license = "MIT"
 # app_include_css = "/assets/erpnext_fiscal_year_based_date_field/css/erpnext_fiscal_year_based_date_field.css"
 # app_include_js = "/assets/erpnext_fiscal_year_based_date_field/js/erpnext_fiscal_year_based_date_field.js"
 
-app_include_js = "/assets/erpnext_fiscal_year_based_date_field/js/erpnext_fiscal_year_based_date_field.js"
+app_include_js = [
+    "/assets/erpnext_fiscal_year_based_date_field/js/erpnext_fiscal_year_based_date_field.js",
+    "/assets/erpnext_fiscal_year_based_date_field/js/erpnext_fiscal_year_based_datetime_field.js",
+]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/erpnext_fiscal_year_based_date_field/css/erpnext_fiscal_year_based_date_field.css"
@@ -183,4 +186,3 @@ app_include_js = "/assets/erpnext_fiscal_year_based_date_field/js/erpnext_fiscal
 # auth_hooks = [
 # 	"erpnext_fiscal_year_based_date_field.auth.validate"
 # ]
-
