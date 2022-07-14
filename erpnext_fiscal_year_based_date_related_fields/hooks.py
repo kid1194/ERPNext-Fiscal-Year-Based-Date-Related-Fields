@@ -17,6 +17,7 @@ app_license = "MIT"
 # app_include_js = "/assets/erpnext_fiscal_year_based_date_related_fields/js/erpnext_fiscal_year_based_date_related_fields.js"
 
 app_include_js = [
+    "/assets/erpnext_fiscal_year_based_date_related_fields/js/erpnext_fiscal_year_date_support.js",
     "/assets/erpnext_fiscal_year_based_date_related_fields/js/erpnext_fiscal_year_based_date_related_fields.js",
     "/assets/erpnext_fiscal_year_based_date_related_fields/js/erpnext_fiscal_year_based_datetime_related_fields.js",
 ]
