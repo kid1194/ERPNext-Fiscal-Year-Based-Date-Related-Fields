@@ -27,5 +27,11 @@ For such reason I created this to help myself and others with such issue.
 4. Add `Fiscal Year` in the `options` property of those fields to enable the plugin
 
 
+#### Supported Field Types
+1. Date
+2. Datetime
+3. Date Range
+
+
 #### License
 MIT
