@@ -18,6 +18,14 @@ For such reason I created this to help myself and others with such issue.
 
 *To be a good neighbor, I had to add a way to enable the plugin for specific date related fields*
 
+---
+
+4. **Uninstall the plugin from any instance/site you want**
+
+`bench --site [sitename] uninstall-app erpnext_fiscal_year_based_date_related_fields`
+
+`bench remove-app erpnext_fiscal_year_based_date_related_fields`
+
 
 ### Usage
 *How to make date related fields respect the default Fiscal Year*
