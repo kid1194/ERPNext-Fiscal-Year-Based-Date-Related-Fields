@@ -3,15 +3,14 @@ from setuptools import setup, find_packages
 with open('requirements.txt') as f:
 	install_requires = f.read().strip().split('\n')
 
-# get version from __version__ variable in erpnext_fiscal_year_based_date_related_fields/__init__.py
 from erpnext_fiscal_year_based_date_related_fields import __version__ as version
 
 setup(
 	name='erpnext_fiscal_year_based_date_related_fields',
 	version=version,
-	description='ERPNext app to make date related fields respect the default fiscal year',
+	description='ERPNext plugin that makes date related fields respect the start and end dates of default fiscal year.',
 	author='Ameen Ahmed (Level Up)',
-	author_email='levelupye@gmail.com, kid1194@gmail.com',
+	author_email='kid1194@gmail.com',
 	packages=find_packages(),
 	zip_safe=False,
 	include_package_data=True,
