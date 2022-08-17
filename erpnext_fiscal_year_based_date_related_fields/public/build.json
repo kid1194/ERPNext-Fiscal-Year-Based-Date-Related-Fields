@@ -1,0 +1,5 @@
+{
+  "js/fiscal_year_date_control.js": ["public/js/fiscal_year_date_control.bundle.js"],
+  "js/fiscal_year_datetime_control.js": ["public/js/fiscal_year_datetime_control.bundle.js"],
+  "js/fiscal_year_date_range_control.js": ["public/js/fiscal_year_date_range_control.bundle.js"]
+}
