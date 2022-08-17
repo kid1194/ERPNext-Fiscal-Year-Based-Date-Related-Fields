@@ -1,13 +1,15 @@
 from . import __version__ as app_version
+from frappe import __version__ as frappe_version
 
 app_name = "erpnext_fiscal_year_based_date_related_fields"
 app_title = "ERPNext Fiscal Year Based Date Related Fields"
 app_publisher = "Ameen Ahmed (Level Up)"
-app_description = "ERPNext app to make date related fields respect the default fiscal year"
+app_description = "ERPNext plugin that makes date related fields respect the start and end dates of default fiscal year."
 app_icon = "octicon octicon-file-directory"
 app_color = "grey"
-app_email = "levelupye@gmail.com, kid1194@gmail.com"
+app_email = "kid1194@gmail.com"
 app_license = "MIT"
+is_frappe_above_v13 = int(frappe_version.split('.')[0]) > 13
 
 # Includes in <head>
 # ------------------
@@ -17,10 +19,13 @@ app_license = "MIT"
 # app_include_js = "/assets/erpnext_fiscal_year_based_date_related_fields/js/erpnext_fiscal_year_based_date_related_fields.js"
 
 app_include_js = [
-    "/assets/erpnext_fiscal_year_based_date_related_fields/js/erpnext_fiscal_year_date_support.js",
-    "/assets/erpnext_fiscal_year_based_date_related_fields/js/erpnext_fiscal_year_based_date_related_fields.js",
-    "/assets/erpnext_fiscal_year_based_date_related_fields/js/erpnext_fiscal_year_based_datetime_related_fields.js",
-    "/assets/erpnext_fiscal_year_based_date_related_fields/js/erpnext_fiscal_year_based_date_range_related_fields.js",
+    'fiscal_year_date_control.bundle.js',
+    'fiscal_year_datetime_control.bundle.js',
+    'fiscal_year_date_range_control.bundle.js'
+] if is_frappe_above_v13 else [
+    "/assets/erpnext_fiscal_year_based_date_related_fields/js/fiscal_year_date_control.js",
+    "/assets/erpnext_fiscal_year_based_date_related_fields/js/fiscal_year_datetime_control.js",
+    "/assets/erpnext_fiscal_year_based_date_related_fields/js/fiscal_year_date_range_control.js",
 ]
 
 # include js, css files in header of web template
