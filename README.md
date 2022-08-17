@@ -24,6 +24,7 @@ For such reason I created this to help myself and others with such issue.
 
 ### Requirements
 - Frappe >= v13.0.0
+- ERPNext >= v13.0.0
 
 ---
 
