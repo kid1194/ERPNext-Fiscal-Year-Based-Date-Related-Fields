@@ -10,7 +10,7 @@ frappe.ui.form.ControlDatetime = frappe.ui.form.ControlDatetime.extend({
         this._super(opts);
     },
     set_value: function(value, force_set_value=false) {
-        value = getDateTime(this, value, true);
+        value = getDateTime(this, value);
         return this._super(value, force_set_value);
     },
     set_input: function(value) {
