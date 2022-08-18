@@ -1,2 +1,2 @@
-frappe
-erpnext
+frappe~=13.0.0
+erpnext~=13.0.0
