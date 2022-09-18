@@ -4,6 +4,8 @@ ERPNext plugin that makes date related fields respect the start and end dates of
 In ERPNext, date related fields show the current date and there is nothing wrong with that, but if you are entering historical data manually then you might end up forgetting to change the date related fields to match the default active **Fiscal Year**.
 For such reason I created this to help myself and others with such issue.
 
+---
+
 ### Table of Contents
 <ul>
     <li><a href="#requirements">Requirements</a></li>
@@ -31,39 +33,103 @@ For such reason I created this to help myself and others with such issue.
 ### Setup
 
 #### Install
-1. Get the plugin from Github
+
+⚠️ *Important* ⚠️
+
+*Do not forget to replace [sitename] with the name of your site in all commands.*
+
+#### Install
+1. Go to bench directory
+
+```
+cd ~/frappe-bench
+```
+
+2. Get plugin from Github
 
 *(Required only once)*
 
-`bench get-app https://github.com/kid1194/ERPNext-Fiscal-Year-Based-Date-Related-Fields`
+```
+bench get-app https://github.com/kid1194/ERPNext-Fiscal-Year-Based-Date-Related-Fields
+```
 
-2. Install the plugin on any instance/site you want
+3. Build plugin
 
-`bench --site [sitename] install-app erpnext_fiscal_year_based_date_related_fields`
+*(Required only once)*
 
-3. Check the usage section below
+```
+bench build --apps erpnext_fiscal_year_based_date_related_fields
+```
+
+4. Install plugin on a specific site
+
+```
+bench --site [sitename] install-app erpnext_fiscal_year_based_date_related_fields
+```
+
+5. Check the usage section below
 
 #### Update
-1. Go to the app directory (frappe-bench/apps/erpnext_fiscal_year_based_date_related_fields) and execute:
+1. Go to app directory
 
-`git pull`
+```
+cd ~/frappe-bench/apps/erpnext_fiscal_year_based_date_related_fields
+```
 
-2. Go back to the frappe-bench directory and execute:
+2. Get updates from Github
 
-`bench --site [sitename] migrate`
+```
+git pull
+```
 
-3. *In case you need to restart bench, execute:*
+3. Go to bench directory
 
-`bench restart`
+```
+cd ~/frappe-bench
+```
+
+4. Build plugin
+
+```
+bench build --apps erpnext_fiscal_year_based_date_related_fields
+```
+
+5. Update a specific site
+
+```
+bench --site [sitename] migrate
+```
+
+6. Restart bench
+
+```
+bench restart
+```
 
 #### Uninstall
-1. Uninstall the plugin from the instance/site
+1. Go to bench directory
 
-`bench --site [sitename] uninstall-app erpnext_fiscal_year_based_date_related_fields`
+```
+cd ~/frappe-bench
+```
 
-2. Uninstall the plugin from bench
+2. Uninstall plugin from a specific site
 
-`bench remove-app erpnext_fiscal_year_based_date_related_fields`
+```
+bench --site [sitename] uninstall-app erpnext_fiscal_year_based_date_related_fields
+```
+
+3. Remove plugin from bench
+
+```
+bench remove-app erpnext_fiscal_year_based_date_related_fields
+```
+
+4. Restart bench
+
+```
+bench restart
+```
 
 ---
 
@@ -72,7 +138,7 @@ For such reason I created this to help myself and others with such issue.
 1. Go to Customization > Customize Form
 2. Enter the form type/name (ex: 'Journal Entry')
 3. Scroll down to the form fields area and edit the date related fields you want
-4. Add `Fiscal Year` in the `options` property of those fields to enable the plugin
+4. Add *Fiscal Year* in the *options* property of those fields to enable the plugin
 
 ---
 

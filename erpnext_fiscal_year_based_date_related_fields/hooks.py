@@ -1,5 +1,11 @@
+# ERPNext Fiscal Year Based Date Related Fields © 2022
+# Author:  Ameen Ahmed
+# Company: Level Up Marketing & Software Development Services
+# Licence: Please refer to license.txt
+
 from . import __version__ as app_version
 from frappe import __version__ as frappe_version
+
 
 app_name = "erpnext_fiscal_year_based_date_related_fields"
 app_title = "ERPNext Fiscal Year Based Date Related Fields"
@@ -9,7 +15,7 @@ app_icon = "octicon octicon-file-directory"
 app_color = "grey"
 app_email = "kid1194@gmail.com"
 app_license = "MIT"
-is_frappe_above_v13 = int(frappe_version.split('.')[0]) > 13
+is_frappe_above_v13 = int(frappe_version.split(".")[0]) > 13
 
 # Includes in <head>
 # ------------------
@@ -19,9 +25,9 @@ is_frappe_above_v13 = int(frappe_version.split('.')[0]) > 13
 # app_include_js = "/assets/erpnext_fiscal_year_based_date_related_fields/js/erpnext_fiscal_year_based_date_related_fields.js"
 
 app_include_js = [
-    'fiscal_year_date_control.bundle.js',
-    'fiscal_year_datetime_control.bundle.js',
-    'fiscal_year_date_range_control.bundle.js'
+    "fiscal_year_date_control.bundle.js",
+    "fiscal_year_datetime_control.bundle.js",
+    "fiscal_year_date_range_control.bundle.js"
 ] if is_frappe_above_v13 else [
     "/assets/erpnext_fiscal_year_based_date_related_fields/js/fiscal_year_date_control.js",
     "/assets/erpnext_fiscal_year_based_date_related_fields/js/fiscal_year_datetime_control.js",

@@ -1,3 +1,8 @@
+# ERPNext Fiscal Year Based Date Related Fields © 2022
+# Author:  Ameen Ahmed
+# Company: Level Up Marketing & Software Development Services
+# Licence: Please refer to license.txt
+
 from setuptools import setup, find_packages
 
 with open('requirements.txt') as f:

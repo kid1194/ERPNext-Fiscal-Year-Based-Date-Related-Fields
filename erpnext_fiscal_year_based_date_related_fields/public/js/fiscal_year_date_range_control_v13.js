@@ -1,21 +1,21 @@
 import {
-    respectFiscalYear,
-    updateDatePicker,
-    getDateTime
-} from './utils/utils.js';
+    extend_class,
+    update_picker,
+    get_datetime
+} from './utils';
 
 frappe.ui.form.ControlDateRange = frappe.ui.form.ControlDateRange.extend({
     init: function(opts) {
-        respectFiscalYear(this);
+        extend_class(this);
         this._super(opts);
     },
     set_datepicker: function() {
         this._super();
-        updateDatePicker(this);
+        update_picker(this);
     },
     set_input: function(value, value2) {
-        value = getDateTime(this, value, true);
-        value2 = getDateTime(this, value2, true);
+        value = get_datetime(this, value, true);
+        value2 = get_datetime(this, value2, true);
         this._super(value, value2);
     }
 });
