@@ -1,3 +1,10 @@
+/*
+ * ERPNext Fiscal Year Based Date Related Fields © 2022
+ * Author:  Ameen Ahmed
+ * Company: Level Up Marketing & Software Development Services
+ * Licence: Please refer to license.txt
+ */
+
 export function extend_class(me) {
     if (me._fiscal_year || !me.df.options || typeof me.df.options !== 'string'
     || me.df.options.toLowerCase().replace(/\s/g, '_') !== 'fiscal_year') {
