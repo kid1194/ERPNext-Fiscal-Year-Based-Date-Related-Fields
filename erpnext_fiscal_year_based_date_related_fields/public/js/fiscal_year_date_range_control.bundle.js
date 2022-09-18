@@ -12,9 +12,9 @@ import {
 } from './utils';
 
 frappe.ui.form.ControlDateRange = class ControlDateRange extends frappe.ui.form.ControlDateRange {
-    constructor(opts) {
+    make() {
         extend_class(this);
-        super(opts);
+        super.make();
     }
     set_datepicker() {
         super.set_datepicker();

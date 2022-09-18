@@ -12,9 +12,9 @@ import {
 } from './utils';
 
 frappe.ui.form.ControlDate = class ControlDate extends frappe.ui.form.ControlDate {
-    constructor(opts) {
+    make() {
         extend_class(this);
-        super(opts);
+        super.make();
     }
     set_value(value, force_set_value=false) {
         value = get_datetime(this, value, true);
