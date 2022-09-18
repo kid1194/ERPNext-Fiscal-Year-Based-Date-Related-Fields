@@ -1,4 +1,5 @@
 # ERPNext Fiscal Year Based Date Related Fields
+
 ERPNext plugin that makes date related fields respect the start and end dates of default fiscal year.
 
 In ERPNext, date related fields show the current date and there is nothing wrong with that, but if you are entering historical data manually then you might end up forgetting to change the date related fields to match the default active **Fiscal Year**.
@@ -138,7 +139,7 @@ bench restart
 1. Go to Customization > Customize Form
 2. Enter the form type/name (ex: 'Journal Entry')
 3. Scroll down to the form fields area and edit the date related fields you want
-4. Add *Fiscal Year* in the *options* property of those fields to enable the plugin
+4. Add **Fiscal Year** in the **options** property of those fields to enable the plugin
 
 ---
 
